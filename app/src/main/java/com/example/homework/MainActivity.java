@@ -31,11 +31,12 @@ public class MainActivity extends AppCompatActivity {
         b2=(Button)findViewById(R.id.change);
 
         TextView t1 = (TextView) findViewById(R.id.emailshow);
-        t1.setText("Hello,"+firebaseAuth.getCurrentUser().getEmail());
+      
 
         if (currentUser == null) {
             sendToLogin();
         }else{
+            t1.setText("Hello,"+firebaseAuth.getCurrentUser().getEmail());
             b2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
